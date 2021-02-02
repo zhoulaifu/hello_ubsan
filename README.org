@@ -1,0 +1,11 @@
+*  helloworld for undefinfed behavior sanitizer
+
+- Compile the code
+
+  afl-clang -fsanitize=undefined -fsanitize-undefined-trap-on-error hello_ubsan.c
+
+- Create an input corpus
+
+- Run the fuzz engine
+
+  afl-fuzz -i in -o out -- ./a.out
